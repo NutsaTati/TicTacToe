@@ -22,9 +22,7 @@ private:
 		char a = game[0];
 
 		for (int i = 1; i < 9; i++) {
-
 			if (a == game[i] && (i + 1) != 3 && (i + 1) != 6 && isdigit(game[i + 1])) { return (i + 1); }
-
 			else a = game[i];
 
 		}

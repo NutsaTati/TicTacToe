@@ -4,7 +4,7 @@ RenderWindow win(VideoMode(600, 600), "Tic Tac Toe", sf::Style::Close | sf::Styl
 bool endscreen = false;
 
 int main(){
-
+	
 
 	// LOAD IMAGES
 
@@ -42,7 +42,7 @@ int main(){
 	int turn = 0;
 	endscreen = false;
 
-
+	
 	while (win.isOpen()) {
 
 		char winner = gameplay.check_for_winner();
@@ -55,7 +55,6 @@ int main(){
 		while (win.pollEvent(e)) {
 			Vector2i mouse_pos = Mouse::getPosition(win);
 			int x = mouse_pos.x, y = mouse_pos.y;
-			cout << mouse_pos.x << "    " << mouse_pos.y << endl;
 			switch (e.type) {
 			case Event::Closed:
 				win.close();
@@ -85,6 +84,7 @@ int main(){
 				}
 			}
 	}
+		// DISPLAYING THE GAME
 
 
 		if (winner != 'N') {
@@ -121,7 +121,6 @@ int main(){
 
 		}
 		else {
-			// DISPLAYING GAME
 
 			win.clear();
 			win.draw(Background);
