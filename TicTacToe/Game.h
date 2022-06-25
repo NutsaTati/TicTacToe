@@ -26,15 +26,15 @@ private:
 			else a = game[i];
 
 		}
+		if (game[0] == game[4] && isdigit(game[8]))return 8;
+		if (game[4] == game[8] && isdigit(game[0]))return 0;
+		if (game[0] == game[8] && isdigit(game[4])) return 4;
 
 
 
 		for (int i = 0; i < 9; i++) {
-
 			if (game[i] == game[i + 3]) {
-
 				if (isdigit(game[i + 6])) return i + 6;
-
 				else if (isdigit(game[i - 3])) return i - 3;
 
 			}
